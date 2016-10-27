@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>start.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(98,151,85); font-style: italic; }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(104,151,187); }
+.s3 { color: rgb(204,120,50); }
+.s4 { color: rgb(204,120,50); font-weight: bold; }
+.s5 { color: rgb(128,128,128); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+start.py</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">''' 
+Zbiory 
+'''</span><span class="s1"> 
+ 
+A=set([</span><span class="s2">1</span><span class="s3">,</span><span class="s2">2</span><span class="s3">,</span><span class="s2">3</span><span class="s1">]) 
+</span><span class="s4">print </span><span class="s1">A 
+ 
+</span><span class="s5"># dodawanie i usiwanie elementow zbioru</span><span class="s1"> 
+A.discard(</span><span class="s2">3</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">A 
+A.add(</span><span class="s2">8</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">A 
+</span><span class="s5"># zbiory niezmienne</span><span class="s1"> 
+B=frozenset([</span><span class="s2">3</span><span class="s3">,</span><span class="s2">5</span><span class="s3">,</span><span class="s2">6</span><span class="s1">]) 
+</span><span class="s4">print </span><span class="s1">B 
+</span><span class="s5"># klucze w slownikach</span><span class="s1"> 
+</span><span class="s5"># slownik = {B,9}</span><span class="s1"> 
+</span><span class="s5"># print slownik</span><span class="s1"> 
+</span><span class="s5"># elementy innych zbiorow</span><span class="s1"> 
+C=set([</span><span class="s2">5</span><span class="s3">,</span><span class="s2">4</span><span class="s3">,</span><span class="s2">9</span><span class="s1">]) 
+C.add(B) 
+</span><span class="s4">print </span><span class="s1">C 
+</span><span class="s5">#zbior pusty</span><span class="s1"> 
+D = set() 
+</span><span class="s4">print </span><span class="s1">D 
+</span><span class="s5">#operacje na zbiorach</span><span class="s1"> 
+ 
+</span><span class="s5">#liczba elementow</span><span class="s1"> 
+</span><span class="s4">print </span><span class="s1">len(A)</span><span class="s3">, </span><span class="s1">len(B)</span><span class="s3">, </span><span class="s1">len(C)</span><span class="s3">, </span><span class="s1">len(D) 
+ 
+</span><span class="s5">#sprawdzanie czy dany obiekt jest elementem zbioru</span><span class="s1"> 
+</span><span class="s4">print </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">A</span><span class="s3">, </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">B</span><span class="s3">, </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">C</span><span class="s3">, </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">D 
+ 
+</span><span class="s5">#sprawdzanie czy dany obiekt nie jest elementem zbioru</span><span class="s1"> 
+</span></pre>
+</body>
+</html>
