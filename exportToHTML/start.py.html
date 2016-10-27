@@ -10,6 +10,7 @@
 .s3 { color: rgb(204,120,50); }
 .s4 { color: rgb(204,120,50); font-weight: bold; }
 .s5 { color: rgb(128,128,128); }
+.s6 { color: rgb(165,194,97); }
 </style>
 </head>
 <BODY BGCOLOR="#2b2b2b">
@@ -53,6 +54,89 @@ D = set()
 </span><span class="s4">print </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">A</span><span class="s3">, </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">B</span><span class="s3">, </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">C</span><span class="s3">, </span><span class="s2">5 </span><span class="s4">in </span><span class="s1">D 
  
 </span><span class="s5">#sprawdzanie czy dany obiekt nie jest elementem zbioru</span><span class="s1"> 
-</span></pre>
+</span><span class="s4">print </span><span class="s2">8 </span><span class="s4">not in </span><span class="s1">A </span><span class="s3">, </span><span class="s2">8 </span><span class="s4">not in </span><span class="s1">B</span><span class="s3">, </span><span class="s2">8 </span><span class="s4">not in </span><span class="s1">C</span><span class="s3">, </span><span class="s2">8 </span><span class="s4">not in </span><span class="s1">D 
+</span><span class="s4">print </span><span class="s6">'</span><span class="s3">\n</span><span class="s6">'</span><span class="s1"> 
+ 
+</span><span class="s5">#sprawdzanie czy dany zbior jest podzbiorem innego zbioru</span><span class="s1"> 
+</span><span class="s4">print </span><span class="s1">set([</span><span class="s2">1</span><span class="s3">,</span><span class="s2">2</span><span class="s1">]) &lt;= A 
+</span><span class="s4">print </span><span class="s1">set([</span><span class="s2">3</span><span class="s3">,</span><span class="s2">4</span><span class="s1">]) &lt;= B 
+</span><span class="s4">print </span><span class="s1">set([</span><span class="s2">5</span><span class="s1">]) &lt;= B 
+</span><span class="s4">print </span><span class="s1">set([</span><span class="s2">1</span><span class="s3">,</span><span class="s2">3</span><span class="s3">,</span><span class="s2">5</span><span class="s1">]) &lt;= A 
+ 
+</span><span class="s4">print </span><span class="s1">A.issubset(B) 
+</span><span class="s4">print </span><span class="s6">'</span><span class="s3">\n</span><span class="s6">'</span><span class="s1"> 
+ 
+</span><span class="s5">#sprawdzanie czy dany zbior jest nadzbiorem innego zbioru</span><span class="s1"> 
+</span><span class="s4">print </span><span class="s1">A&gt;=set([</span><span class="s2">1</span><span class="s3">,</span><span class="s2">2</span><span class="s1">]) 
+</span><span class="s4">print </span><span class="s1">A&gt;=set([</span><span class="s2">3</span><span class="s3">,</span><span class="s2">4</span><span class="s1">]) 
+ 
+</span><span class="s4">print </span><span class="s1">A.issubset(B) 
+</span><span class="s4">print </span><span class="s6">'</span><span class="s3">\n</span><span class="s6">'</span><span class="s1"> 
+ 
+</span><span class="s5">#laczenie zbiorow</span><span class="s1"> 
+E=A|B 
+</span><span class="s4">print </span><span class="s1">E 
+</span><span class="s4">print </span><span class="s6">'</span><span class="s3">\n</span><span class="s6">'</span><span class="s1"> 
+ 
+</span><span class="s5">#czesc wspolna dwoch zbiorow</span><span class="s1"> 
+F = A &amp; B 
+</span><span class="s4">print </span><span class="s1">F 
+</span><span class="s4">print </span><span class="s6">'</span><span class="s3">\n</span><span class="s6">'</span><span class="s1"> 
+ 
+</span><span class="s5">#roznica symetryczna</span><span class="s1"> 
+G = A^B 
+</span><span class="s4">print </span><span class="s1">G 
+ 
+</span><span class="s6">''' 
+Klasy 
+'''</span><span class="s1"> 
+ 
+</span><span class="s4">class </span><span class="s1">Napis: 
+    txt = </span><span class="s6">'Pierwsza klasa'</span><span class="s1"> 
+    </span><span class="s4">def </span><span class="s1">wyswietl(self): 
+        </span><span class="s4">return </span><span class="s6">'witaj'</span><span class="s1"> 
+ 
+</span><span class="s5">#konkretyzacja klasy (wywolanie obiektu kklasy)</span><span class="s1"> 
+ 
+napis = Napis() 
+ 
+</span><span class="s5">#odowalkenie sie do metody</span><span class="s1"> 
+</span><span class="s4">print </span><span class="s1">napis.wyswietl(); 
+ 
+</span><span class="s5">#odwolanie do atrybutu klasy</span><span class="s1"> 
+</span><span class="s4">print </span><span class="s1">napis.txt 
+</span><span class="s5">#konkrety klasy</span><span class="s1"> 
+</span><span class="s4">class </span><span class="s1">Zespolona: 
+    </span><span class="s4">def </span><span class="s1">__init__(self</span><span class="s3">, </span><span class="s1">rzeczywista</span><span class="s3">, </span><span class="s1">urojona): 
+        self.r = rzeczywista 
+        self.i = urojona 
+ 
+x = Zespolona(</span><span class="s2">5.0</span><span class="s3">,</span><span class="s1">-</span><span class="s2">3.2</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">x.r</span><span class="s3">, </span><span class="s1">x.i 
+ 
+</span><span class="s6">''' 
+metody operujace na napisach 
+'''</span><span class="s1"> 
+ 
+napis = </span><span class="s6">'Witaj w swiecie PYTHONA!'</span><span class="s1"> 
+ 
+</span><span class="s4">print </span><span class="s1">napis.capitalize() 
+</span><span class="s4">print </span><span class="s1">napis.center(</span><span class="s2">64</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.center(</span><span class="s2">64</span><span class="s3">,</span><span class="s6">'*'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.count(</span><span class="s6">'e'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.find(</span><span class="s6">'Taj'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.find(</span><span class="s6">'taj'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.isdigit() 
+</span><span class="s4">print </span><span class="s6">'12'</span><span class="s1">.isdigit() 
+</span><span class="s4">print </span><span class="s6">'12.4'</span><span class="s1">.isdigit() 
+</span><span class="s4">print </span><span class="s6">' '</span><span class="s1">.join(([</span><span class="s6">'Python'</span><span class="s3">, </span><span class="s6">'jest'</span><span class="s3">, </span><span class="s6">'super'</span><span class="s1">])) 
+</span><span class="s4">print </span><span class="s1">napis.join([</span><span class="s6">'***'</span><span class="s1">]*</span><span class="s2">5</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.lower() 
+</span><span class="s4">print </span><span class="s1">napis.replace(</span><span class="s6">'PYTHONA'</span><span class="s3">, </span><span class="s6">'programowania'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.rfind(</span><span class="s6">'PYTHONA'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s6">'Python jest super'</span><span class="s1">.rfind(</span><span class="s6">'e'</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.rjust(</span><span class="s2">32</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.rjust(</span><span class="s2">64</span><span class="s1">) 
+</span><span class="s4">print </span><span class="s1">napis.rjust(</span><span class="s2">64</span><span class="s3">,</span><span class="s6">'.'</span><span class="s1">)</span></pre>
 </body>
 </html>
