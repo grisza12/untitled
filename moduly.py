@@ -6,7 +6,7 @@ import random
 #from random import *           nazwy funkcji dostepne bez
 #from random import randint     funkcja dostepna bez uzycia nazwy modulu
 
-random.seed()
+random.seed()# tzw ziarno - zmiana czynnika losowosci
 print random.randint(1,15)      #losuje liczbe calkowita z zakresu od 1 do 15
 print random.randint(1,15)
 
