@@ -27,7 +27,6 @@ print nww(2,7)
 l = range(2,101)
 print l
 
-
 def usunZakres(liczba,granicaGorna,lista):
 
     m = range(0,granicaGorna,liczba)
